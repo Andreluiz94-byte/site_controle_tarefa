@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="title">
+        <h1>Tempo gasto para a realização das tarefas</h1>
+        <p>Com base na conclusão de tarefas do Jira, este site é para um controle maior do tempo gasto pela equipe.</p>
+    </header>
+    
+    <main class="wrapper">
+        <section class="container">
+            <div class="input-section">
+                <label for="nome">Nome do Dev:</label>
+                <input type="text" id="nome" placeholder="Nome do Funcionário">
+            </div>
+            <div class="input-section">
+                <label for="tarefa">Tarefa:</label>
+                <input type="text" id="tarefa" placeholder="Tarefa realizada">
+            </div>
+            <div class="input-section">
+                <label for="tempo-estimado">Tempo Estimado (dias):</label>
+                <input type="number" id="tempo-estimado" placeholder="Tempo Estimado">
+            </div>
+            <div class="input-section">
+                <label for="tempo-gasto">Tempo Gasto (dias):</label>
+                <input type="number" id="tempo-gasto" placeholder="Tempo Gasto">
+            </div>
+            <button onclick="adicionarTarefa()">Adicionar Tarefa</button>
+            <button onclick="calcularSaldo()">Calcular Saldo</button>
+            <button class="download-button" onclick="downloadSaldos()">Baixar Saldos</button>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Desenvolvedor(res)</h2>
+            <div id="funcionarios"></div>
+        </aside>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
